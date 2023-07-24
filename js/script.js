@@ -23,22 +23,30 @@
 
 'use strict';
 
-const numberOfFilms = prompt('Сколько фильмов вы уже посмотрели?','')
+const numberOfFilms = prompt('Сколько фильмов вы уже посмотрели?','');
 
 const personalMovieDB = {
-    count: numberOfFilms,
+    count: {},
     movies: {},
+    cinema: {},
+    expensiveTicket:{},
     actors: {},
     genres: [],
-    private: false,
+    privat: false
 };
 
-const q1 = prompt('Один из последних просмотренных фильмов?',''),
-      q2 = prompt('На сколько оцените его?'),
-      q3 = prompt('Один из последних просмотренных фильмов?',''),
-      q4 = prompt('На сколько оцените его?');
+const q1=prompt('Один из последних просмотренных фильмов?',''),
+      q2=prompt('На сколько оцените его?','');
 
-personalMovieDB.movies[q1]=q2;
-personalMovieDB.movies[q3]=q4;
+const q3=prompt('сколько знаете кинотеатров?',''),
+      q4=prompt('Цена среднего билета в кино')
+
+const q5=prompt('Самая дорогая цена за билет','');
+
+personalMovieDB.movies[q1]=q2,
+personalMovieDB.expensiveTicket=[q5],
+personalMovieDB.cinema[q3]=q4;
 
 console.log(personalMovieDB);
+
+
